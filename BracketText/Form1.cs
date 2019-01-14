@@ -11,8 +11,6 @@ using System.Windows.Forms;
 
 namespace BracketText
 {
-    
-
     public partial class frmMain : Form
     {
         List<string> playerList = new List<string>();
@@ -52,10 +50,9 @@ namespace BracketText
                     });
                 }
                 // following code is for testing sake of my code
-                Player player2 = BracketPlayers[2];
-                MessageBox.Show(player2.Name);
+                // Player player2 = BracketPlayers[2];
+                // MessageBox.Show(player2.Name);
             }
-            
         }
 
         private void btnBracket_Click(object sender, EventArgs e)
@@ -96,23 +93,23 @@ namespace BracketText
                 }
             }
 
-            // round 2 check to see who wins round 2 of the 2 rounds
+            // round 2 check to see who wins round 2
             for (int g2 = 0; g2 < 4; g2 += 2)
             {
-                if (winnersRound1[g2].Game2 > BracketPlayers[g2 + 1].Game2)
+                if (winnersRound1[g2].Game2 > winnersRound1[g2 + 1].Game2)
                 {
                     winnersRound2.Add(new Game2
                     {
-                        Name = BracketPlayers[g2].Name,
-                        Game3 = Convert.ToInt32(BracketPlayers[g2].Game3)
+                        Name = winnersRound1[g2].Name,
+                        Game3 = Convert.ToInt32(winnersRound1[g2].Game3)
                     });
                 }
                 else
                 {
                     winnersRound2.Add(new Game2
                     {
-                        Name = BracketPlayers[g2 + 1].Name,
-                        Game3 = Convert.ToInt32(BracketPlayers[g2 + 1].Game3)
+                        Name = winnersRound1[g2 + 1].Name,
+                        Game3 = Convert.ToInt32(winnersRound1[g2 + 1].Game3)
                     });
                 }
             }
@@ -130,7 +127,6 @@ namespace BracketText
                 winner = winnersRound2[1].Name;
                 runnerUp = winnersRound2[0].Name;
             }
-
             MessageBox.Show("Winner is " + winner + "\n" + "Runner up is " + runnerUp);
         }
     }
