@@ -15,6 +15,7 @@ namespace BracketText
     {
         List<string> playerList = new List<string>();
         List<Player> BracketPlayers = new List<Player>();
+        
         public frmMain()
         {
             InitializeComponent();
@@ -35,7 +36,6 @@ namespace BracketText
                 // read the file and adds each line to the player list array
                 playerList = File.ReadLines(fileDialog.FileName).ToList();
                 rtbNotes.Text = ""; // for visual testing sake
-                
 
                 foreach (string note in playerList) // for each line do the following
                 {
@@ -49,46 +49,56 @@ namespace BracketText
                         Game3 = Convert.ToInt32(data[3])
                     });
                 }
-                // following code is for testing sake of my code
-                // Player player2 = BracketPlayers[2];
-                // MessageBox.Show(player2.Name);
             }
         }
 
         private void btnBracket_Click(object sender, EventArgs e)
         {
-            Random rnd = new Random();
+            int number = 0;
             int howMany = playerList.Count();
-            List<string> bracketList = new List<string>();
-            int number;
-            for (int rand = 0; rand < howMany; rand++)
+            List<Player> bracketList = new List<Player>();
+            Random rnd = new Random();
+            List<int> indexNum = new List<int>();
+            for(int i = 0; i < howMany; i++)
             {
-                number = rnd.Next(0, howMany);
+                number = rnd.Next(0, playerList.Count());
+                if (indexNum.Contains(number))
+                {
+                    i--;
+                }
+                else
+                {
+                    indexNum.Add(number);
+                }
             }
 
-            // need to do random stil
+            for (int rand = 0; rand < howMany; rand++)
+            {
+                bracketList.Add(BracketPlayers[indexNum[rand]]);
+            }
 
             List<Game1> winnersRound1 = new List<Game1>();
             List<Game2> winnersRound2 = new List<Game2>();
+
             // round 1 check who wins round one of the 4 rounds for round 1 of each bracket
             for (int g1 = 0; g1 < 8; g1 += 2)
             {
-                if (BracketPlayers[g1].Game1 > BracketPlayers[g1+1].Game1)
+                if (bracketList[g1].Game1 > bracketList[g1+1].Game1)
                 {
                     winnersRound1.Add(new Game1
                     {
-                        Name = BracketPlayers[g1].Name,
-                        Game2 = Convert.ToInt32(BracketPlayers[g1].Game2),
-                        Game3 = Convert.ToInt32(BracketPlayers[g1].Game3)
+                        Name = bracketList[g1].Name,
+                        Game2 = Convert.ToInt32(bracketList[g1].Game2),
+                        Game3 = Convert.ToInt32(bracketList[g1].Game3)
                     });
                 }
                 else
                 {
                     winnersRound1.Add(new Game1
                     {
-                        Name = BracketPlayers[g1 + 1].Name,
-                        Game2 = Convert.ToInt32(BracketPlayers[g1 + 1].Game2),
-                        Game3 = Convert.ToInt32(BracketPlayers[g1 + 1].Game3)
+                        Name = bracketList[g1 + 1].Name,
+                        Game2 = Convert.ToInt32(bracketList[g1 + 1].Game2),
+                        Game3 = Convert.ToInt32(bracketList[g1 + 1].Game3)
                     });
                 }
             }
@@ -127,7 +137,8 @@ namespace BracketText
                 winner = winnersRound2[1].Name;
                 runnerUp = winnersRound2[0].Name;
             }
-            MessageBox.Show("Winner is " + winner + "\n" + "Runner up is " + runnerUp);
+            MessageBox.Show("Winner is " + winner + " winning $25" + "\n" 
+                + "Runner up is " + runnerUp + " winning $10");
         }
     }
 }
