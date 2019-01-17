@@ -114,7 +114,7 @@
             // 
             this.rtbNotes.Location = new System.Drawing.Point(11, 137);
             this.rtbNotes.Name = "rtbNotes";
-            this.rtbNotes.Size = new System.Drawing.Size(319, 96);
+            this.rtbNotes.Size = new System.Drawing.Size(319, 115);
             this.rtbNotes.TabIndex = 11;
             this.rtbNotes.Text = "";
             // 
@@ -140,7 +140,7 @@
             // 
             // btnBracket
             // 
-            this.btnBracket.Location = new System.Drawing.Point(11, 240);
+            this.btnBracket.Location = new System.Drawing.Point(12, 258);
             this.btnBracket.Name = "btnBracket";
             this.btnBracket.Size = new System.Drawing.Size(75, 23);
             this.btnBracket.TabIndex = 18;
@@ -150,7 +150,7 @@
             // 
             // btnClearEntries
             // 
-            this.btnClearEntries.Location = new System.Drawing.Point(254, 239);
+            this.btnClearEntries.Location = new System.Drawing.Point(255, 258);
             this.btnClearEntries.Name = "btnClearEntries";
             this.btnClearEntries.Size = new System.Drawing.Size(75, 23);
             this.btnClearEntries.TabIndex = 19;
@@ -160,112 +160,112 @@
             // 
             // tbRunnerUp
             // 
-            this.tbRunnerUp.Location = new System.Drawing.Point(715, 220);
+            this.tbRunnerUp.Location = new System.Drawing.Point(715, 200);
             this.tbRunnerUp.Name = "tbRunnerUp";
             this.tbRunnerUp.Size = new System.Drawing.Size(100, 20);
             this.tbRunnerUp.TabIndex = 62;
             // 
             // tbWinner
             // 
-            this.tbWinner.Location = new System.Drawing.Point(715, 160);
+            this.tbWinner.Location = new System.Drawing.Point(715, 140);
             this.tbWinner.Name = "tbWinner";
             this.tbWinner.Size = new System.Drawing.Size(100, 20);
             this.tbWinner.TabIndex = 61;
             // 
             // tbR3P2
             // 
-            this.tbR3P2.Location = new System.Drawing.Point(594, 263);
+            this.tbR3P2.Location = new System.Drawing.Point(594, 243);
             this.tbR3P2.Name = "tbR3P2";
             this.tbR3P2.Size = new System.Drawing.Size(100, 20);
             this.tbR3P2.TabIndex = 60;
             // 
             // tbR2P4
             // 
-            this.tbR2P4.Location = new System.Drawing.Point(473, 290);
+            this.tbR2P4.Location = new System.Drawing.Point(473, 270);
             this.tbR2P4.Name = "tbR2P4";
             this.tbR2P4.Size = new System.Drawing.Size(100, 20);
             this.tbR2P4.TabIndex = 59;
             // 
             // tbR2P3
             // 
-            this.tbR2P3.Location = new System.Drawing.Point(473, 213);
+            this.tbR2P3.Location = new System.Drawing.Point(473, 193);
             this.tbR2P3.Name = "tbR2P3";
             this.tbR2P3.Size = new System.Drawing.Size(100, 20);
             this.tbR2P3.TabIndex = 58;
             // 
             // tbR2P2
             // 
-            this.tbR2P2.Location = new System.Drawing.Point(473, 138);
+            this.tbR2P2.Location = new System.Drawing.Point(473, 118);
             this.tbR2P2.Name = "tbR2P2";
             this.tbR2P2.Size = new System.Drawing.Size(100, 20);
             this.tbR2P2.TabIndex = 57;
             // 
             // tbP8
             // 
-            this.tbP8.Location = new System.Drawing.Point(352, 307);
+            this.tbP8.Location = new System.Drawing.Point(352, 287);
             this.tbP8.Name = "tbP8";
             this.tbP8.Size = new System.Drawing.Size(100, 20);
             this.tbP8.TabIndex = 56;
             // 
             // tbP7
             // 
-            this.tbP7.Location = new System.Drawing.Point(352, 281);
+            this.tbP7.Location = new System.Drawing.Point(352, 261);
             this.tbP7.Name = "tbP7";
             this.tbP7.Size = new System.Drawing.Size(100, 20);
             this.tbP7.TabIndex = 55;
             // 
             // tbP6
             // 
-            this.tbP6.Location = new System.Drawing.Point(352, 229);
+            this.tbP6.Location = new System.Drawing.Point(352, 209);
             this.tbP6.Name = "tbP6";
             this.tbP6.Size = new System.Drawing.Size(100, 20);
             this.tbP6.TabIndex = 54;
             // 
             // tbP5
             // 
-            this.tbP5.Location = new System.Drawing.Point(352, 203);
+            this.tbP5.Location = new System.Drawing.Point(352, 183);
             this.tbP5.Name = "tbP5";
             this.tbP5.Size = new System.Drawing.Size(100, 20);
             this.tbP5.TabIndex = 53;
             // 
             // tbP4
             // 
-            this.tbP4.Location = new System.Drawing.Point(352, 154);
+            this.tbP4.Location = new System.Drawing.Point(352, 134);
             this.tbP4.Name = "tbP4";
             this.tbP4.Size = new System.Drawing.Size(100, 20);
             this.tbP4.TabIndex = 52;
             // 
             // tbP3
             // 
-            this.tbP3.Location = new System.Drawing.Point(352, 128);
+            this.tbP3.Location = new System.Drawing.Point(352, 108);
             this.tbP3.Name = "tbP3";
             this.tbP3.Size = new System.Drawing.Size(100, 20);
             this.tbP3.TabIndex = 51;
             // 
             // tbP2
             // 
-            this.tbP2.Location = new System.Drawing.Point(352, 76);
+            this.tbP2.Location = new System.Drawing.Point(352, 56);
             this.tbP2.Name = "tbP2";
             this.tbP2.Size = new System.Drawing.Size(100, 20);
             this.tbP2.TabIndex = 50;
             // 
             // tbR3P1
             // 
-            this.tbR3P1.Location = new System.Drawing.Point(594, 107);
+            this.tbR3P1.Location = new System.Drawing.Point(594, 87);
             this.tbR3P1.Name = "tbR3P1";
             this.tbR3P1.Size = new System.Drawing.Size(100, 20);
             this.tbR3P1.TabIndex = 49;
             // 
             // tbR2P1
             // 
-            this.tbR2P1.Location = new System.Drawing.Point(473, 62);
+            this.tbR2P1.Location = new System.Drawing.Point(473, 42);
             this.tbR2P1.Name = "tbR2P1";
             this.tbR2P1.Size = new System.Drawing.Size(100, 20);
             this.tbR2P1.TabIndex = 48;
             // 
             // tbP1
             // 
-            this.tbP1.Location = new System.Drawing.Point(352, 50);
+            this.tbP1.Location = new System.Drawing.Point(352, 30);
             this.tbP1.Name = "tbP1";
             this.tbP1.Size = new System.Drawing.Size(100, 20);
             this.tbP1.TabIndex = 47;
@@ -273,7 +273,7 @@
             // lblRunnerUp
             // 
             this.lblRunnerUp.AutoSize = true;
-            this.lblRunnerUp.Location = new System.Drawing.Point(712, 195);
+            this.lblRunnerUp.Location = new System.Drawing.Point(712, 175);
             this.lblRunnerUp.Name = "lblRunnerUp";
             this.lblRunnerUp.Size = new System.Drawing.Size(56, 13);
             this.lblRunnerUp.TabIndex = 46;
@@ -282,7 +282,7 @@
             // lblWinner
             // 
             this.lblWinner.AutoSize = true;
-            this.lblWinner.Location = new System.Drawing.Point(712, 143);
+            this.lblWinner.Location = new System.Drawing.Point(712, 123);
             this.lblWinner.Name = "lblWinner";
             this.lblWinner.Size = new System.Drawing.Size(41, 13);
             this.lblWinner.TabIndex = 45;
@@ -319,7 +319,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(850, 377);
+            this.ClientSize = new System.Drawing.Size(830, 321);
             this.Controls.Add(this.tbRunnerUp);
             this.Controls.Add(this.tbWinner);
             this.Controls.Add(this.tbR3P2);
