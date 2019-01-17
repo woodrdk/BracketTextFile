@@ -139,6 +139,17 @@ namespace BracketText
                         runnerUp = winnersRound2[0].Name;   
                     }
                     MessageBox.Show("Winner is " + winner + "\n" + "Runner up is " + runnerUp);
+                    
+                    tbP1.Text = BracketPlayers[0].Name + " " + BracketPlayers[0].Game1;
+                    tbP2.Text = BracketPlayers[1].Name + " " + BracketPlayers[1].Game1;
+                    tbP3.Text = BracketPlayers[2].Name + " " + BracketPlayers[2].Game1;
+                    tbP4.Text = BracketPlayers[3].Name + " " + BracketPlayers[3].Game1;
+                    tbP5.Text = BracketPlayers[4].Name + " " + BracketPlayers[4].Game1;
+                    tbP6.Text = BracketPlayers[5].Name + " " + BracketPlayers[5].Game1;
+                    tbP7.Text = BracketPlayers[6].Name + " " + BracketPlayers[6].Game1;
+                    tbP8.Text = BracketPlayers[7].Name + " " + BracketPlayers[7].Game1;
+
+
                 }
                 
             }
@@ -153,6 +164,15 @@ namespace BracketText
         {
             playerList.Clear();
             rtbNotes.Clear();
+            tbP1.Clear();
+            tbP2.Clear();
+            tbP3.Clear();
+            tbP4.Clear();
+            tbP5.Clear();
+            tbP6.Clear();
+            tbP7.Clear();
+            tbP8.Clear();
         }
+
     }
 }
