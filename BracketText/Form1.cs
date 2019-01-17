@@ -148,8 +148,8 @@ namespace BracketText
                         winner = winnersRound2[1].Name;
                         runnerUp = winnersRound2[0].Name;
                     }
-                    MessageBox.Show("Winner is " + winner + " winning $25" + "\n"
-                        + "Runner up is " + runnerUp + " winning $10");
+                    //MessageBox.Show("Winner is " + winner + " winning $25" + "\n"
+                    //    + "Runner up is " + runnerUp + " winning $10");
                  
                     tbP1.Text = bracketList[0].Name + " " + bracketList[0].Game1;
                     tbP2.Text = bracketList[1].Name + " " + bracketList[1].Game1;

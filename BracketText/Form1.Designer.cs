@@ -114,6 +114,7 @@
             // 
             this.rtbNotes.Location = new System.Drawing.Point(11, 137);
             this.rtbNotes.Name = "rtbNotes";
+            this.rtbNotes.ReadOnly = true;
             this.rtbNotes.Size = new System.Drawing.Size(319, 115);
             this.rtbNotes.TabIndex = 11;
             this.rtbNotes.Text = "";
