@@ -59,75 +59,100 @@ namespace BracketText
         {
             Random rnd = new Random();
             int howMany = playerList.Count();
-            List<string> bracketList = new List<string>();
-            int number;
-            for (int rand = 0; rand < howMany; rand++)
+            if(howMany >= 8 )
             {
-                number = rnd.Next(0, howMany);
-            }
-
-            // need to do random stil
-
-            List<Game1> winnersRound1 = new List<Game1>();
-            List<Game2> winnersRound2 = new List<Game2>();
-            // round 1 check who wins round one of the 4 rounds for round 1 of each bracket
-            for (int g1 = 0; g1 < 8; g1 += 2)
-            {
-                if (BracketPlayers[g1].Game1 > BracketPlayers[g1+1].Game1)
+               
+                List<string> bracketList = new List<string>();
+                int number;
+                for (int rand = 0; rand < howMany; rand++)
                 {
-                    winnersRound1.Add(new Game1
+                    number = rnd.Next(0, howMany);
+                }
+
+                // need to do random stil
+
+                List<Game1> winnersRound1 = new List<Game1>();
+                List<Game2> winnersRound2 = new List<Game2>();
+                // round 1 check who wins round one of the 4 rounds for round 1 of each bracket
+                for (int g1 = 0; g1 < 8; g1 += 2)
+                {
+                    if (BracketPlayers[g1].Game1 > BracketPlayers[g1 + 1].Game1)
                     {
-                        Name = BracketPlayers[g1].Name,
-                        Game2 = Convert.ToInt32(BracketPlayers[g1].Game2),
-                        Game3 = Convert.ToInt32(BracketPlayers[g1].Game3)
-                    });
+                        winnersRound1.Add(new Game1
+                        {
+                            Name = BracketPlayers[g1].Name,
+                            Game2 = Convert.ToInt32(BracketPlayers[g1].Game2),
+                            Game3 = Convert.ToInt32(BracketPlayers[g1].Game3)
+                        });
+                    }
+                    else
+                    {
+                        winnersRound1.Add(new Game1
+                        {
+                            Name = BracketPlayers[g1 + 1].Name,
+                            Game2 = Convert.ToInt32(BracketPlayers[g1 + 1].Game2),
+                            Game3 = Convert.ToInt32(BracketPlayers[g1 + 1].Game3)
+                        });
+                    }
+                }
+
+                if (cbDoubles.Checked)
+                {
+                    MessageBox.Show("Doubles tournament is not set up yet");
+                  
                 }
                 else
                 {
-                    winnersRound1.Add(new Game1
-                    {
-                        Name = BracketPlayers[g1 + 1].Name,
-                        Game2 = Convert.ToInt32(BracketPlayers[g1 + 1].Game2),
-                        Game3 = Convert.ToInt32(BracketPlayers[g1 + 1].Game3)
-                    });
-                }
-            }
 
-            // round 2 check to see who wins round 2
-            for (int g2 = 0; g2 < 4; g2 += 2)
-            {
-                if (winnersRound1[g2].Game2 > winnersRound1[g2 + 1].Game2)
-                {
-                    winnersRound2.Add(new Game2
+                    // round 2 check to see who wins round 2
+                    for (int g2 = 0; g2 < 4; g2 += 2)
                     {
-                        Name = winnersRound1[g2].Name,
-                        Game3 = Convert.ToInt32(winnersRound1[g2].Game3)
-                    });
-                }
-                else
-                {
-                    winnersRound2.Add(new Game2
-                    {
-                        Name = winnersRound1[g2 + 1].Name,
-                        Game3 = Convert.ToInt32(winnersRound1[g2 + 1].Game3)
-                    });
-                }
-            }
+                        if (winnersRound1[g2].Game2 > winnersRound1[g2 + 1].Game2)
+                        {
+                            winnersRound2.Add(new Game2
+                            {
+                                Name = winnersRound1[g2].Name,
+                                Game3 = Convert.ToInt32(winnersRound1[g2].Game3)
+                            });
+                        }
+                        else
+                        {
+                            winnersRound2.Add(new Game2
+                            {
+                                Name = winnersRound1[g2 + 1].Name,
+                                Game3 = Convert.ToInt32(winnersRound1[g2 + 1].Game3)
+                            });
+                        }
+                    }
 
-            // round 3 check to see who wins top or second of final round
-            string winner;
-            string runnerUp;
-            if (winnersRound2[0].Game3 > winnersRound2[1].Game3)
-            {
-                winner = winnersRound2[0].Name;
-                runnerUp = winnersRound2[1].Name;
+                    // round 3 check to see who wins top or second of final round
+                    string winner;
+                    string runnerUp;
+                    if (winnersRound2[0].Game3 > winnersRound2[1].Game3)
+                    {
+                        winner = winnersRound2[0].Name;
+                        runnerUp = winnersRound2[1].Name;
+                    }
+                    else
+                    {
+                        winner = winnersRound2[1].Name;
+                        runnerUp = winnersRound2[0].Name;   
+                    }
+                    MessageBox.Show("Winner is " + winner + "\n" + "Runner up is " + runnerUp);
+                }
+                
             }
             else
             {
-                winner = winnersRound2[1].Name;
-                runnerUp = winnersRound2[0].Name;
+                MessageBox.Show("Please import player's and scores.");
             }
-            MessageBox.Show("Winner is " + winner + "\n" + "Runner up is " + runnerUp);
+            
+        }
+
+        private void btnClearEntries_Click(object sender, EventArgs e)
+        {
+            playerList.Clear();
+            rtbNotes.Clear();
         }
     }
 }

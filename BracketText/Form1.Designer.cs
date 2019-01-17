@@ -38,6 +38,7 @@
             this.btnEntries = new System.Windows.Forms.Button();
             this.cbDoubles = new System.Windows.Forms.CheckBox();
             this.btnBracket = new System.Windows.Forms.Button();
+            this.btnClearEntries = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblLocation
@@ -126,11 +127,22 @@
             this.btnBracket.UseVisualStyleBackColor = true;
             this.btnBracket.Click += new System.EventHandler(this.btnBracket_Click);
             // 
+            // btnClearEntries
+            // 
+            this.btnClearEntries.Location = new System.Drawing.Point(254, 239);
+            this.btnClearEntries.Name = "btnClearEntries";
+            this.btnClearEntries.Size = new System.Drawing.Size(75, 23);
+            this.btnClearEntries.TabIndex = 19;
+            this.btnClearEntries.Text = "Clear entries";
+            this.btnClearEntries.UseVisualStyleBackColor = true;
+            this.btnClearEntries.Click += new System.EventHandler(this.btnClearEntries_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(353, 303);
+            this.Controls.Add(this.btnClearEntries);
             this.Controls.Add(this.btnBracket);
             this.Controls.Add(this.lblLocation);
             this.Controls.Add(this.tbLocation);
@@ -160,6 +172,7 @@
         private System.Windows.Forms.Button btnEntries;
         private System.Windows.Forms.CheckBox cbDoubles;
         private System.Windows.Forms.Button btnBracket;
+        private System.Windows.Forms.Button btnClearEntries;
     }
 }
 
